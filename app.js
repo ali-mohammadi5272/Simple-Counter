@@ -10,3 +10,21 @@ const decBtn = document.getElementsByClassName("counter__decreaseBtn")[0];
 const incrementAction = { type: "INCREMENT" };
 const decrementAction = { type: "DECREMENT" };
 const resetAction = { type: "RESET" };
+//
+//
+//
+//
+// Reducer
+const counterReducer = (state = 0, action) => {
+  if (action.type === "INCREMENT") {
+    return ++state;
+  }
+  //
+  else if (action.type === "DECREMENT") {
+    return --state;
+  }
+  //
+  else if (action.type === "RESET") {
+    return 0;
+  }
+};
