@@ -34,3 +34,21 @@ const counterReducer = (state = 0, action) => {
 //
 // store
 const store = Redux.createStore(counterReducer);
+//
+//
+//
+//
+// Count Change Color handle
+const setCountColor = (count) => {
+  if (count > 0) {
+    countElem.style.color = "green";
+  }
+  //
+  else if (count < 0) {
+    countElem.style.color = "red";
+  }
+  //
+  else {
+    countElem.style.color = "white";
+  }
+};
