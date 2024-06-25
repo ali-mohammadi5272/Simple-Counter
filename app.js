@@ -28,3 +28,9 @@ const counterReducer = (state = 0, action) => {
     return 0;
   }
 };
+//
+//
+//
+//
+// store
+const store = Redux.createStore(counterReducer);
