@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.counter {
+  box-shadow: 0px 0px 20px -5px #272727;
+  padding: 20px;
+  .counter__count {
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    margin: 0px 0px 100px 0px;
+  }
+  .counter__btnSection {
+    margin-bottom: 25px;
+  }
+  .counter__btn {
+    font-size: 35px;
+    padding: 10px 30px;
+    border: none;
+  }
+  .counter__increaseBtn {
+    background-color: lightgreen;
+    &:hover {
+      background-color: #23c476;
+    }
+  }
+  .counter__reset {
+    &:hover {
+      background-color: #dcdcdc;
+    }
+  }
+  .counter__decreaseBtn {
+    background-color: #ff5d5dd6;
+    &:hover {
+      background-color: #fe3838;
+    }
+  }
+}
