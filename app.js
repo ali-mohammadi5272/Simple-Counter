@@ -52,3 +52,23 @@ const setCountColor = (count) => {
     countElem.style.color = "white";
   }
 };
+//
+//
+//
+//
+// handle Events
+resetBtn.addEventListener("click", () => {
+  store.dispatch(resetAction);
+  countElem.innerHTML = store.getState();
+  setCountColor(store.getState());
+});
+incBtn.addEventListener("click", () => {
+  store.dispatch(incrementAction);
+  countElem.innerHTML = store.getState();
+  setCountColor(store.getState());
+});
+decBtn.addEventListener("click", () => {
+  store.dispatch(decrementAction);
+  countElem.innerHTML = store.getState();
+  setCountColor(store.getState());
+});
