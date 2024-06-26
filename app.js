@@ -5,6 +5,7 @@ import {
   counterReset,
 } from "./Redux/actionsTypes.js";
 
+// Select Dom Elements
 const countElem = document.getElementsByClassName("counter__count")[0];
 const resetBtn = document.getElementsByClassName("counter__reset")[0];
 const incBtn = document.getElementsByClassName("counter__increaseBtn")[0];
@@ -37,7 +38,7 @@ const store = Redux.createStore(counterReducer);
 //
 //
 //
-// Count Change Color handle
+// handle Count Change Color
 const setCountColor = (count) => {
   if (count > 0) {
     countElem.style.color = "green";
