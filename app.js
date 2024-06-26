@@ -59,18 +59,21 @@ const setCountColor = (count) => {
 resetBtn.addEventListener("click", () => {
   const action = counterActionCreator(counterReset);
   store.dispatch(action);
-  countElem.innerHTML = store.getState();
-  setCountColor(store.getState());
+  const newValue = store.getState();
+  countElem.innerHTML = newValue;
+  setCountColor(newValue);
 });
 incBtn.addEventListener("click", () => {
   const action = counterActionCreator(counterIncrement);
   store.dispatch(action);
-  countElem.innerHTML = store.getState();
-  setCountColor(store.getState());
+  const newValue = store.getState();
+  countElem.innerHTML = newValue;
+  setCountColor(newValue);
 });
 decBtn.addEventListener("click", () => {
   const action = counterActionCreator(counterDecrement);
   store.dispatch(action);
-  countElem.innerHTML = store.getState();
-  setCountColor(store.getState());
+  const newValue = store.getState();
+  countElem.innerHTML = newValue;
+  setCountColor(newValue);
 });
