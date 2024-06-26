@@ -1,21 +1,14 @@
+import { counterActionCreator } from "./Redux/actionCreator.js";
 import {
   counterDecrement,
   counterIncrement,
   counterReset,
-} from "./Redux/actionsTypes";
+} from "./Redux/actionsTypes.js";
 
 const countElem = document.getElementsByClassName("counter__count")[0];
 const resetBtn = document.getElementsByClassName("counter__reset")[0];
 const incBtn = document.getElementsByClassName("counter__increaseBtn")[0];
 const decBtn = document.getElementsByClassName("counter__decreaseBtn")[0];
-//
-//
-//
-//
-// Actions
-const incrementAction = { type: "INCREMENT" };
-const decrementAction = { type: "DECREMENT" };
-const resetAction = { type: "RESET" };
 //
 //
 //
@@ -64,17 +57,20 @@ const setCountColor = (count) => {
 //
 // handle Events
 resetBtn.addEventListener("click", () => {
-  store.dispatch(resetAction);
+  const action = counterActionCreator(counterReset);
+  store.dispatch(action);
   countElem.innerHTML = store.getState();
   setCountColor(store.getState());
 });
 incBtn.addEventListener("click", () => {
-  store.dispatch(incrementAction);
+  const action = counterActionCreator(counterIncrement);
+  store.dispatch(action);
   countElem.innerHTML = store.getState();
   setCountColor(store.getState());
 });
 decBtn.addEventListener("click", () => {
-  store.dispatch(decrementAction);
+  const action = counterActionCreator(counterDecrement);
+  store.dispatch(action);
   countElem.innerHTML = store.getState();
   setCountColor(store.getState());
 });
