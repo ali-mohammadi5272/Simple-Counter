@@ -1,3 +1,9 @@
+import {
+  counterDecrement,
+  counterIncrement,
+  counterReset,
+} from "./Redux/actionsTypes";
+
 const countElem = document.getElementsByClassName("counter__count")[0];
 const resetBtn = document.getElementsByClassName("counter__reset")[0];
 const incBtn = document.getElementsByClassName("counter__increaseBtn")[0];
@@ -16,15 +22,15 @@ const resetAction = { type: "RESET" };
 //
 // Reducer
 const counterReducer = (state = 0, action) => {
-  if (action.type === "INCREMENT") {
+  if (action.type === counterIncrement) {
     return ++state;
   }
   //
-  else if (action.type === "DECREMENT") {
+  else if (action.type === counterDecrement) {
     return --state;
   }
   //
-  else if (action.type === "RESET") {
+  else if (action.type === counterReset) {
     return 0;
   }
 };
