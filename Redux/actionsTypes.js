@@ -1,5 +1,5 @@
-const incrementActionType = "INCREMENT";
-const decrementActionType = "DECREMENT";
-const resetActionType = "RESET";
+const counterIncrement = "INCREMENT";
+const counterDecrement = "DECREMENT";
+const counterReset = "RESET";
 
-export { incrementActionType, decrementActionType, resetActionType };
+export { counterIncrement, counterDecrement, counterReset };
